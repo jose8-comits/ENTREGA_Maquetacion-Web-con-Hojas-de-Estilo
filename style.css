@@ -84,6 +84,7 @@ nav ul li a:focus {
 .analysis-text {
   columns: 1;
   column-gap: 2rem;
+  margin: 5em;
 }
 
 /* Estilo para las secciones */
@@ -94,38 +95,41 @@ main {
 /* Estilo de las imágenes dentro de las capturas */
 .screenshots {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
     margin-top: 20px;
+    flex-wrap: wrap; /* para que en pantallas pequeñas puedan saltar de línea */
 }
 
 .screenshots img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 /* Títulos */
 h2 {
-    font-size: 1.8rem;
+    font-size: 3em;
     margin-bottom: 20px;
     color: #333;
+    display: flex;
+    align-self: center;
+    justify-self: center;
 }
 
-/* Estilo de los iframes (vídeos, sitios embebidos) */
 iframe {
+    display: block;
+    margin: 0 auto 20px auto; 
+    max-width: 900px; 
     width: 100%;
-    max-width: 1200px;
-    margin-bottom: 20px;
+    height: 400px;
     border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 /* Estilo de los elementos de texto */
-.analysis-text {
-    margin: 20px 0;
-}
 
 ul {
     list-style: none;
@@ -136,7 +140,13 @@ ul li {
 }
 
 strong {
-    color: #333;
+    font-weight: 700;
+    color: #222;
+    font-size: 1.1rem;
+}
+
+ul li strong {
+    font-size: 1.2rem; /* un poco más grande en la lista */
 }
 
 /* Estilos para el pie de página */
@@ -147,6 +157,11 @@ footer {
     padding: 10px 0;
     margin-top: 40px;
 }
+
+section {
+    margin-top: 7%;
+}
+
 .cal-sans-regular {
   font-family: "Cal Sans", sans-serif;
   font-weight: 400;
@@ -162,6 +177,8 @@ footer {
   width: 100%;
   height: auto;
   border: 1px solid #ccc;
+  display: flex;
+  justify-self: center;
 }
 
 /* Estilo para las imágenes responsivas */
@@ -200,3 +217,4 @@ footer {
     columns: 2;
   }
 }
+
