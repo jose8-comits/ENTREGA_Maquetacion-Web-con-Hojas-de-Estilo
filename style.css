@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fuente y base */
+body {
+    font-family: 'Cal Sans', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Estilo para el encabezado */
+header {
+    background-color: #333;
+    color: #fff;
+    position: fixed; /* Fija el encabezado en la parte superior */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Asegura que el header esté por encima del resto de contenido */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Espacio inferior para evitar que el contenido lo cubra */
+}
+
+/* Estilo para el título en el encabezado */
+header h1 {
+    font-family: 'Cal Sans', sans-serif;
+    font-size: 2rem;
+    margin-left: 20px; /* Margen a la izquierda */
+    flex-grow: 1; /* Permite que el título ocupe el espacio disponible a la izquierda */
+}
+
+/* Estilo para la barra de navegación */
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end; /* Los enlaces estarán alineados a la derecha */
+    gap: 20px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+header nav a:hover {
+    color: #ff6f61;
+}
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+nav ul li {
+  margin-right: 1rem;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #eeecec;
+}
+html {
+  scroll-behavior: smooth;
+}
+nav ul li a:hover,
+nav ul li a:focus {
+  color: #dd1b3b;
+  outline: none;
+}
+.analysis-text {
+  columns: 1;
+  column-gap: 2rem;
+}
+
+/* Estilo para las secciones */
+main {
+    padding: 80px 20px 20px 20px; /* Se agrega padding-top para no solapar el contenido con el header */
+}
+
+/* Estilo de las imágenes dentro de las capturas */
+.screenshots {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.screenshots img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos */
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Estilo de los iframes (vídeos, sitios embebidos) */
+iframe {
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 20px;
+    border: none;
+}
+
+/* Estilo de los elementos de texto */
+.analysis-text {
+    margin: 20px 0;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+strong {
+    color: #333;
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 40px;
+}
+.cal-sans-regular {
+  font-family: "Cal Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.screenshots {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+.screenshots img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+}
+
+/* Estilo para las imágenes responsivas */
+@media (min-width: 1200px) {
+    .screenshots img {
+        max-width: 600px; /* Limitamos las imágenes a 600px en pantallas grandes */
+    }
+}
+
+@media (max-width: 1200px) and (min-width: 768px) {
+    .screenshots img {
+        max-width: 400px; /* Limitamos las imágenes a 400px en tabletas */
+    }
+}
+
+@media (max-width: 768px) {
+    .screenshots img {
+        max-width: 100%; /* En móviles, las imágenes ocupan todo el ancho */
+    }
+
+    header h1 {
+        font-size: 1.5rem; /* Ajustamos el tamaño del título en móviles */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Ajustamos el tamaño de los subtítulos en móviles */
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+@media (min-width: 800px) {
+  .analysis-text {
+    columns: 2;
+  }
+}
