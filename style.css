@@ -4,44 +4,40 @@
     box-sizing: border-box;
 }
 
-/* Fuente y base */
 body {
     font-family: 'Cal Sans', sans-serif;
     line-height: 1.6;
-    background-color: #f8f8f8;
+    background-color: #ffffff;
     color: #333;
 }
 
-/* Estilo para el encabezado */
 header {
     background-color: #333;
     color: #fff;
-    position: fixed; /* Fija el encabezado en la parte superior */
+    position: fixed; 
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000; /* Asegura que el header esté por encima del resto de contenido */
+    z-index: 1000;
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* Espacio inferior para evitar que el contenido lo cubra */
+    margin-bottom: 20px;
 }
 
-/* Estilo para el título en el encabezado */
 header h1 {
     font-family: 'Cal Sans', sans-serif;
     font-size: 2rem;
-    margin-left: 20px; /* Margen a la izquierda */
-    flex-grow: 1; /* Permite que el título ocupe el espacio disponible a la izquierda */
+    margin-left: 20px; 
+    flex-grow: 1; 
 }
 
-/* Estilo para la barra de navegación */
 header nav ul {
     list-style-type: none;
     display: flex;
-    justify-content: flex-end; /* Los enlaces estarán alineados a la derecha */
+    justify-content: flex-end; 
     gap: 20px;
 }
 
@@ -67,7 +63,7 @@ nav ul {
   display: flex;
 }
 nav ul li {
-  margin-right: 1rem;
+  margin: 10px 0;
 }
 nav ul li a {
   text-decoration: none;
@@ -78,27 +74,22 @@ html {
 }
 nav ul li a:hover,
 nav ul li a:focus {
-  color: #dd1b3b;
+  color: #c7dd4b;
   outline: none;
 }
 .analysis-text {
+  font-family: 'Montserrat Alternates', sans-serif;  
   columns: 1;
   column-gap: 2rem;
   margin: 5em;
 }
 
-/* Estilo para las secciones */
-main {
-    padding: 80px 20px 20px 20px; /* Se agrega padding-top para no solapar el contenido con el header */
-}
-
-/* Estilo de las imágenes dentro de las capturas */
 .screenshots {
     display: flex;
     justify-content: center;
     gap: 15px;
     margin-top: 20px;
-    flex-wrap: wrap; /* para que en pantallas pequeñas puedan saltar de línea */
+    flex-wrap: wrap; 
 }
 
 .screenshots img {
@@ -108,11 +99,10 @@ main {
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-/* Títulos */
 h2 {
     font-size: 3em;
     margin-bottom: 20px;
-    color: #333;
+    color: #3f3f3f;
     display: flex;
     align-self: center;
     justify-self: center;
@@ -129,41 +119,40 @@ iframe {
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-/* Estilo de los elementos de texto */
-
 ul {
     list-style: none;
 }
 
-ul li {
-    margin: 10px 0;
-}
-
 strong {
+    font-family: 'Montserrat Alternates', sans-serif;
     font-weight: 700;
     color: #222;
     font-size: 1.1rem;
 }
 
 ul li strong {
-    font-size: 1.2rem; /* un poco más grande en la lista */
+    font-size: 1.2rem;
 }
 
-/* Estilos para el pie de página */
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    margin-top: 40px;
 }
 
 section {
-    margin-top: 7%;
+    margin-top: 10em;
 }
 
 .cal-sans-regular {
   font-family: "Cal Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.montserrat-alternates-regular {
+  font-family: "Montserrat Alternates", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -181,30 +170,49 @@ section {
   justify-self: center;
 }
 
-/* Estilo para las imágenes responsivas */
+.oscuro{
+    background-color: #000000;
+    color: #ffffff;
+    border: 6em solid rgb(0, 0, 0);
+}
+
+.oscuro h2{
+    color: #ffffff;
+}
+
+.oscuro strong{
+    color: #ffffff;
+}
+
+.claro{
+    background-color: #ffffff;
+    color: #000000;
+}
+
+
 @media (min-width: 1200px) {
     .screenshots img {
-        max-width: 600px; /* Limitamos las imágenes a 600px en pantallas grandes */
+        max-width: 600px; 
     }
 }
 
 @media (max-width: 1200px) and (min-width: 768px) {
     .screenshots img {
-        max-width: 400px; /* Limitamos las imágenes a 400px en tabletas */
+        max-width: 400px; 
     }
 }
 
 @media (max-width: 768px) {
     .screenshots img {
-        max-width: 100%; /* En móviles, las imágenes ocupan todo el ancho */
+        max-width: 100%; 
     }
 
     header h1 {
-        font-size: 1.5rem; /* Ajustamos el tamaño del título en móviles */
+        font-size: 1.5rem; 
     }
 
     h2 {
-        font-size: 1.5rem; /* Ajustamos el tamaño de los subtítulos en móviles */
+        font-size: 1.5rem; 
     }
 
     header nav ul {
@@ -217,4 +225,3 @@ section {
     columns: 2;
   }
 }
-
