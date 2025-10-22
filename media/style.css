@@ -220,9 +220,7 @@ footer {
     font-style: normal;
 }
 
-/* Media Queries para diferentes dispositivos */
 
-/* Tablets y superiores */
 @media (min-width: 768px) {
     header {
         padding: 20px 40px;
@@ -258,7 +256,7 @@ footer {
     }
 }
 
-/* Desktop grande */
+
 @media (min-width: 1200px) {
     main {
         margin-top: 90px;
@@ -273,7 +271,7 @@ footer {
     }
 }
 
-/* Móviles pequeños */
+
 @media (max-width: 480px) {
     header {
         flex-direction: column;
@@ -340,7 +338,6 @@ footer {
     }
 }
 
-/* Mejoras para accesibilidad y UX */
 @media (prefers-reduced-motion: reduce) {
     * {
         animation-duration: 0.01ms !important;
@@ -350,7 +347,6 @@ footer {
     }
 }
 
-/* Optimización para pantallas táctiles */
 @media (hover: none) and (pointer: coarse) {
     nav ul li a {
         padding: 10px 15px;
